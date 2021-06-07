@@ -9,7 +9,8 @@ ENV TERM xterm-256color
 # Install nano
 RUN apk add nano
 
-# Add colors to bash commands
+# Add bash & colors to bash commands
+RUN apk add bash
 COPY .docker-prompt /etc/.docker-prompt
 RUN echo '. /etc/.docker-prompt' >> /etc/bash.bashrc \
   && echo '. /etc/.docker-prompt' >> /root/.bashrc
