@@ -1,0 +1,36 @@
+version: "3.7"
+
+services:
+  backend:
+    container_name: myapp_backend
+    restart: always
+    build: .
+    environment:
+      - APP_ENV=development
+      - APP_PORT=9000
+    volumes:
+      - ./src:/var/www/myapp/src
+      - ./test:/var/www/myapp/test
+    working_dir: /var/www/myapp
+    ports:
+      - "9001:9000"
+    links:
+      - redis
+    depends_on:
+      - redis
+  redis: # Example Service
+    container_name: myapp_redis
+    restart: always
+    image: redis:6.0-alpine
+    expose:
+      - "6379"
+    volumes:
+      - myapp_redis_data:/data
+
+volumes:
+  myapp_redis_data:
+
+networks:
+  default:
+    external:
+      name: myapp
