@@ -1,4 +1,4 @@
-FROM amd64/node:14.17.0-alpine
+FROM amd64/node:16.20.1-alpine
 
 LABEL maintainer="dev@crowdlinker.com"
 
