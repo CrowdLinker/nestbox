@@ -51,8 +51,8 @@ CMD [ "yarn", "start:dev", "--preserveWatchOutput" ]
 
 ## Installed Libraries
 
-- node (v14.17.0) / npm (v6.14.13)
-- yarn (v1.22.5)
+- node (v16.20.1) / npm (v8.19.4)
+- yarn (v1.22.19)
 
 ### Important Information
 
