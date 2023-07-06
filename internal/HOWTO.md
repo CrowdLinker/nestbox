@@ -12,15 +12,15 @@ Node versions on AMD64 OS arch.
     ```bash
     git fetch && git checkout master
 
-    # Update the Dockerfile with the new node version - amd64/node:16.20.1-alpine.
+    # Update the Dockerfile with the new node version - amd64/node:18.16.1-alpine.
 
     git add Dockerfile
 
-    git commit -m "Added amd64/node:16.20.1-alpine"
+    git commit -m "Added amd64/node:18.16.1-alpine"
 
     git push origin master
 
-    git tag -a "amd64-16.20.1-alpine" -m "Release - amd64-16.20.1-alpine"
+    git tag -a "amd64-18.16.1-alpine" -m "Release - amd64-18.16.1-alpine"
 
     git push -u origin --tags
     ```
@@ -31,11 +31,11 @@ Node versions on AMD64 OS arch.
     <summary><h4>Docker</h4></summary>
 
     ```bash
-    docker buildx build --tag crowdlinker/nestbox:amd64-16.20.1-alpine .
+    docker buildx build --tag crowdlinker/nestbox:amd64-18.16.1-alpine .
 
     docker image ls
 
-    docker push crowdlinker/nestbox:amd64-16.20.1-alpine
+    docker push crowdlinker/nestbox:amd64-18.16.1-alpine
     ```
 
 </details>
